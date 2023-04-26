@@ -1,7 +1,7 @@
 #! /bin/bash
 # Make Instance Ready for Remote Desktop or RDP
 apt-get update
-rm -rf win2022 win2022.img win2022.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
+rm -rf win2022 win2022.img windows2022.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
 wget -O windows2022.gz https://archive.org/download/windows2022/windows2022.gz
 gunzip windows2022.gz
