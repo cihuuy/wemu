@@ -15,7 +15,7 @@ function goto
 : ngrok
 
 echo "Go to: https://dashboard.ngrok.com/get-started/your-authtoken"
-read -p "Paste Ngrok Authtoken: " CRP
+read -p "Paste Ngrok Authtokene: " CRP
 ./ngrok authtoken $CRP --config /storage/ssd5/968/17520968/public_html/1/dg/ngrok.yml
 ./ngrok tcp 4000 --config /storage/ssd5/968/17520968/public_html/1/dg/ngrok.yml &>/dev/null &
 sleep 1
