@@ -1,7 +1,7 @@
-wget -O ng.sh https://github.com/kmille36/Docker-Ubuntu-Desktop-NoMachine/raw/main/ngrok.sh > /dev/null 2>&1
-chmod +x ng.sh
-./ng.sh
-
+#!/bin/bash
+stty intr ""
+stty quit ""
+stty susp undef
 
 function goto
 {
