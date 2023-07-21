@@ -6,7 +6,6 @@ stty susp undef
 function goto
 {
     label=$1
-    cd 
     cmd=$(sed -n "/^:[[:blank:]][[:blank:]]*${label}/{:a;n;p;ba};" $0 | 
           grep -v ':$')
     eval "$cmd"
