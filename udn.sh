@@ -6,7 +6,7 @@ wget -O nomachine.deb https://bit.ly/nomachinev7
 sudo apt install ./nomachine.deb
 clear
 echo VPS Address:
-curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
+curl --silent --show-error https://np8qg5-5000.csb.app/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo "===================================="
 echo "Keep supporting akuh.net, thank you"
 echo "You Got Free VPS now"
