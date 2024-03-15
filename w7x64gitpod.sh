@@ -6,8 +6,8 @@ echo "Wait..."
 echo "I m Working Now.."
 mv win7lite.img
 echo "Download ngrok"
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
-unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
+tar -xf ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
 read -p "Ctrl + V Authtoken: " CRP 
 ./ngrok authtoken $CRP 
 nohup ./ngrok tcp 3388 &>/dev/null &
@@ -15,7 +15,7 @@ echo Downloading File From akuh.net
 apt-get install qemu-system-x86 -y
 echo "Wait"
 echo "Starting Windows"
-qemu-system-x86_64 -hda win7lite.img -m 4G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
+qemu-system-x86_64 -hda win7lite.img -m 2G -smp cores=2 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
 clear
 echo RDP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
